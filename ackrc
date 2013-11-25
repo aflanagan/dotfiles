@@ -1,0 +1,13 @@
+--literal
+--type-set=img=.jpg,.jpeg,.JPG,.JPEG,.png,.PNG,.gif,.GIF
+--type-set=json=.json
+--type-set=pdf=.pdf
+--type-set=rtf=.rtf
+--follow
+--text
+--ignore-case
+--noimg
+--nojson
+--nopdf
+--nortf
+--ignore-dir=.svn

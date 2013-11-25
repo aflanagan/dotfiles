@@ -1,0 +1,122 @@
+### Add your user info here:
+# [user]
+  # name = august-trulia
+  # email = aflanagan@trulia.com
+
+[core]
+  autocrlf = input
+  safecrlf = false
+  excludesfile = ~/.gitignore
+  editor = subl -w
+
+[diff]
+    tool = bcomp
+[difftool]
+    prompt = false
+[difftool "bcomp"]
+    trustExitCode = true
+    cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
+[merge]
+    tool = bcomp
+[mergetool]
+    prompt = false
+[mergetool "bcomp"]
+    trustExitCode = true
+    cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+
+[alias]
+  # General tools
+  co = checkout
+  br = branch
+  st = status -s
+  pr = pull --rebase   # Safely update from the upstream branch (usually a remote branch).
+
+  ### Logs
+  lg = log --graph --pretty=format:\"%Cred%h%Creset - %C(yellow)%an%Creset - %s %Cblue%d%Creset %Cgreen(%cr)%Creset\" --abbrev-commit
+  lgall = log --graph --pretty=format:\"%Cred%h%Creset - %C(yellow)%an%Creset - %s %Cblue%d%Creset %Cgreen(%cr)%Creset\" --abbrev-commit --all
+
+  last = log -1 --name-status  # Show the latest commit message and files
+  lastd = log -1 -p   # Show the latest commit and a full diff. Note: the -p shows a full patch.
+
+  # Show logs only for the current directory (or just use git lg <dir>)
+  ld = log --graph --pretty=format:\"%Cred%h%Creset - %C(yellow)%an%Creset - %s %Cgreen(%cr)%Creset\" --abbrev-commit .
+
+  # Show logs with all files listed
+  logstat = log --name-status
+
+  ### Diffing
+  showdiff = !sh -c 'git difftool $1^..$1' -
+  diffc = diff --cached
+  dt = difftool
+  lastdt = difftool HEAD~1
+  dtc = difftool --cached --dir-diff  # Do full directory diff, not just single file
+
+  ### Search tools
+  # Grep the entire source tree for a string/regex
+  # grepall = '!sh show $(git rev-list --all)'
+  grepall = "!sh -c 'git grep $1 $(git rev-list --all)' -"
+
+  ### Other tools
+  # Show all git aliases
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ = \\2/' | sort
+
+  # Lookup an author
+  whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+
+  topcommitters = !sh -c 'git shortlog -s -n ${1}~${0}..${1}'
+
+
+
+  ### Branch tools
+
+  # Show me commits that I haven't pushed to the upstream yet (usually the remote branch).
+  newcommits = !git lg @{u}..
+
+  # Show me commits from the upstream that I haven't merged in yet (usually the remote branch).
+  whatsnew = !git lg ..@{u}
+
+  # Completely revert my branch to the tracked branch.
+  revert-entirely = reset --hard @{u}
+
+
+
+  ### Utilities
+  current-branch = rev-parse --abbrev-ref HEAD
+  tracking-branch = !git for-each-ref --format='%(upstream:short)' $(git symbolic-ref HEAD)
+
+  # Ignore a file
+  ig = "!git update-index --assume-unchanged $1"
+
+  # Unignore a file
+  uig = "!git update-index --no-assume-unchanged $1"
+
+  # Show ignored files
+  showig = !git ls-files -v |grep ^[a-z]  # Cat files and look
+
+
+  ### Trulia-specific
+
+
+  # Create a new branch.  Tracks current branch, unless another branch is explicitly specified.
+  # e.g.
+  #   git newbranch mytopic                     -> tracks current branch
+  #   git newbranch mytopic origin/somebranch   -> tracks origin/somebranch
+  # The '-' at the end starts the cmdline params from 1 instead of 0.
+  newbranch = !sh -c 'git checkout -b $1 -t $2' -
+
+  # Share your branch with others (on your forked repo).  Assumes you have the 'myfork' remote set up.
+  # e.g
+  #   git sharebranch my-feature-branch
+  # Also see: git-collaborate, a ruby script which fetches a coworker's branch and lets you immediately work on it.
+  sharebranch = !git push -u myfork $(git current-branch)
+
+
+[color]
+  ui = true
+
+[log]
+  # This will default dates to local time unless overridden on the command line or by the repo.
+  date = local
+[user]
+	email = aflanagan@trulia.com
+	name = aflanagan-trulia
