@@ -35,17 +35,14 @@ mylsr () {
 
 ### Edit/reload shortcuts
 alias realias="source ~/.bash_aliases"
-alias edalias="subl ~/.bash_aliases"
-alias edackrc="subl ~/.ackrc"
+alias edalias="sublime ~/.bash_aliases"
+alias edackrc="sublime ~/.ackrc"
 
-alias sb='subl $1'
-alias edhosts="subl /etc/hosts"
-alias edprofile="subl ~/.bash_profile"
-alias reprofile="source ~/.bash_profile"
+alias sb='sublime $1'
 
 
 ### Navigation
-alias tru="cd /wb/tru"
+alias code="cd ~/code"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
@@ -54,7 +51,7 @@ alias ecl="open -a eclipse $1"
 alias cog="open -a cog $1"
 alias mate="open -a TextMate $1"
 alias calc="open -a calculator"
-alias chrome="open -a chrome"
+alias chrome="open -a Google Chrome"
 alias firefox="open -a firefox"
 alias versions="open -a versions"
 alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetBeans/NetBeans\ 7.1.2.app/Contents/MacOS/netbeans $1"

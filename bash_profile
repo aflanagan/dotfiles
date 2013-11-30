@@ -1,6 +1,6 @@
 # Add php to path (this will get pear, pecl etc)
 
-PATH="/usr/local/bin:/usr/local/php5/bin:${HOME}/bin:${PATH}"
+PATH="/usr/local/bin:/usr/local/mysql/bin:${HOME}/bin:${PATH}"
 export PATH
 
 if [ -f ~/.bash_aliases ]; then
