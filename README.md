@@ -1,6 +1,5 @@
-Trulia Dotfiles
+Dotfiles
 ===============
-**Note: You do NOT need to fork this repo to use it.**
 
 This is a collection of useful dotfiles for developers.
 Inspired by [dotfiles.github.com](http://dotfiles.github.com/)
@@ -10,11 +9,8 @@ Keeping your dotfiles on github is a great way to speed up your setup time if an
 ### How to use
 
 1. Clone this repo
-2. Create a new directory for yourself under 'users', with your trulia email alias.
-3. Copy the dotfiles you want from the skeleton directory and commit them.
-4. If you have existing dotfiles in your home directory, diff your old files against your new dir in this repo. Copy/integrate as appropriate and commit them to your new dir.
-5. Symlink your new source-tracked dotfiles into your home directory (see below)
-6. Feel free to look at other people's dotfiles to get ideas on how to improve your own environment.
+2. Symlink your new source-tracked dotfiles into your home directory (see below)
+
 
 ### Some goodies for you
 
@@ -32,7 +28,7 @@ that you are about to sym link.
 
 <pre>
 # Run this from the root of this repo, e.g. ~/src/dotfiles or wherever it is.
-YOUR_DOTFILES_DIR=`pwd`/users/`whoami`
+YOUR_DOTFILES_DIR=`pwd`
 echo Installing files from $YOUR_DOTFILES_DIR into your home directory.
 
 ln -s ${YOUR_DOTFILES_DIR}/ackrc ~/.ackrc
