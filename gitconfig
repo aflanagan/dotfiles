@@ -1,13 +1,13 @@
 ### Add your user info here:
 # [user]
-  # name = august-trulia
-  # email = aflanagan@trulia.com
+  # name = August Flanagan
+  # email = august.flanagan@gmail.com
 
 [core]
   autocrlf = input
   safecrlf = false
   excludesfile = ~/.gitignore
-  editor = subl -w
+  editor = sublime -w
 
 [diff]
     tool = bcomp
@@ -119,4 +119,4 @@
   date = local
 [user]
 	email = aflanagan@trulia.com
-	name = aflanagan-trulia
+	name = August Flanagan
