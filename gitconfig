@@ -118,5 +118,5 @@
   # This will default dates to local time unless overridden on the command line or by the repo.
   date = local
 [user]
-	email = aflanagan@trulia.com
+	email = august.flanagan@gmail.com
 	name = August Flanagan
