@@ -3,7 +3,7 @@
 ### Program overrides
 alias ll="ls -larht"
 alias fgrep="fgrep -i $*"
-alias diff="colordiff --exclude=".svn" --exclude="*.pyc" $*"
+#alias diff="colordiff --exclude=".svn" --exclude="*.pyc" $*"
 alias df='df -ah'
 
 # Note Do NOT alias ack! causes bad stuff to happen.  Use .ackrc instead.
@@ -62,3 +62,7 @@ alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetB
 # Start a simple web server
 alias pyserv="python -m SimpleHTTPServer 8000"
 
+
+### Django
+alias rstest="cd /Users/_uscr/code/app && ./manage.py test rickshaw/tests notifications/tests account/tests"
+alias rs="cd /Users/_uscr/code/app"

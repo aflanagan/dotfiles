@@ -6,7 +6,7 @@
 [core]
   autocrlf = input
   safecrlf = false
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/_uscr/.gitignore
   editor = sublime -w
 
 [diff]
@@ -120,3 +120,9 @@
 [user]
 	email = august.flanagan@gmail.com
 	name = August Flanagan
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
