@@ -62,3 +62,7 @@ alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetB
 # Start a simple web server
 alias pyserv="python -m SimpleHTTPServer 8000"
 
+###NerdWallet
+alias nw="cd /srv/nerdwallet"
+alias nwapp="cd /srv/nerdwallet/app-site"
+alias nwtest="cd /srv/nerdwallet/nerdtests"
