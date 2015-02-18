@@ -44,3 +44,4 @@ export GOPATH=/wb/go
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+eval "$(rbenv init -)"

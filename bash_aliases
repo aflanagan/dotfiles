@@ -35,14 +35,14 @@ mylsr () {
 
 ### Edit/reload shortcuts
 alias realias="source ~/.bash_aliases"
-alias edalias="sublime ~/.bash_aliases"
-alias edackrc="sublime ~/.ackrc"
+alias edalias="subl ~/.bash_aliases"
+alias edackrc="subl ~/.ackrc"
 
-alias sb='sublime $1'
+alias sb='subl $1'
 
 
 ### Navigation
-alias code="cd ~/code"
+alias code="cd ~/Dropbox/code"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
@@ -62,7 +62,3 @@ alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetB
 # Start a simple web server
 alias pyserv="python -m SimpleHTTPServer 8000"
 
-
-### Django
-alias rstest="cd /Users/_uscr/code/app && ./manage.py test rickshaw/tests notifications/tests account/tests"
-alias rs="cd /Users/_uscr/code/app"
