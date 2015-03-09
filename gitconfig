@@ -7,7 +7,7 @@
   autocrlf = input
   safecrlf = false
 	excludesfile = /Users/_uscr/.gitignore
-  editor = sublime -w
+  editor = subl -w
 
 [diff]
     tool = bcomp
@@ -122,7 +122,7 @@
 	name = August Flanagan
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

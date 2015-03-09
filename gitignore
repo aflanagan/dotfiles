@@ -1,4 +1,12 @@
+# Your client key is specific to your computer -- don't check it in
+
+!/.chef/nerdwallet-validation.pem
+
+/.vagrant/
+
+# Our app repos are checked out into this folder
+
+!.gitkeep
+
 .DS_Store
-*.pyc
-.svn
-sftp-config.json
+Gemfile.lock

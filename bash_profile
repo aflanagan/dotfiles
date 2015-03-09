@@ -35,6 +35,8 @@ export HISTIGNORE="&:ls:ll:[bf]g:exit:rm *"
 # Also, don't forget to switch Netbeans debugging to create/not create the browser-debug-open as appropriate.
 export XDEBUG_CONFIG="idekey=netbeans-xdebug";
 
+export NW_DEV_VAGRANT_PATH=/Users/augustflanagan/dev-vagrant
+
 # GO!
 export GOROOT=/usr/local/Cellar/go/1.0.2
 export PATH=$GOROOT/bin:$PATH
