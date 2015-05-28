@@ -48,3 +48,7 @@ source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 eval "$(rbenv init -)"
 export CHEF_USER=aflanagan
+
+ssh-add ~/.ssh/keys/nw_rsa
+ssh-add ~/.ssh/keys/cronitor_key
+ssh-add ~/.ssh/cronitor.pem

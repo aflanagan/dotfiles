@@ -39,10 +39,11 @@ alias edalias="subl ~/.bash_aliases"
 alias edackrc="subl ~/.ackrc"
 
 alias sb='subl $1'
+alias a='atom $1'
 
 
 ### Navigation
-alias code="cd ~/Dropbox/code"
+alias code="cd ~/code"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
@@ -66,3 +67,4 @@ alias pyserv="python -m SimpleHTTPServer 8000"
 alias nw="cd /srv/nerdwallet"
 alias nwapp="cd /srv/nerdwallet/app-site"
 alias nwtest="cd /srv/nerdwallet/nerdtests"
+alias vnssh="cd ~/dev-vagrant && vagrant ssh"
