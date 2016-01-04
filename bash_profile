@@ -1,6 +1,4 @@
-# Add php to path (this will get pear, pecl etc)
-
-PATH="/usr/local/bin:/usr/local/mysql/bin:${HOME}/bin:${PATH}"
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/mysql/bin:${HOME}/bin:${PATH}"
 export PATH
 
 if [ -f ~/.bash_aliases ]; then
@@ -28,20 +26,6 @@ shopt -s nocaseglob
 # Case insensitive filenames for tab completion.
 bind 'set completion-ignore-case on'
 
-# Don't capture all history commands.
-export HISTIGNORE="&:ls:ll:[bf]g:exit:rm *"
-
-# XDebug, to be used with Netbeans.  This might mess up debugging if phpunit runs at the same time as the web browser.
-# Also, don't forget to switch Netbeans debugging to create/not create the browser-debug-open as appropriate.
-export XDEBUG_CONFIG="idekey=netbeans-xdebug";
-
-export NW_DEV_VAGRANT_PATH=/Users/augustflanagan/dev-vagrant
-
-# GO!
-export GOROOT=/usr/local/Cellar/go/1.0.2
-export PATH=$GOROOT/bin:$PATH
-export GOPATH=/wb/go
-
 # Git autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
@@ -49,6 +33,9 @@ source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 eval "$(rbenv init -)"
 export CHEF_USER=aflanagan
 
-ssh-add ~/.ssh/keys/nw_rsa
+# add ssh keys
 ssh-add ~/.ssh/keys/cronitor_key
 ssh-add ~/.ssh/cronitor.pem
+
+# Work around bug in browserify
+ulimit -n 2560
