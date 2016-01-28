@@ -34,6 +34,7 @@ eval "$(rbenv init -)"
 export CHEF_USER=aflanagan
 
 # add ssh keys
+ssh-add ~/.ssh/keys/nw_rsa # use this one for personal github
 ssh-add ~/.ssh/keys/cronitor_key
 ssh-add ~/.ssh/cronitor.pem
 
