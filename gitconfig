@@ -1,7 +1,7 @@
 ### Add your user info here:
-# [user]
-  # name = August Flanagan
-  # email = august.flanagan@gmail.com
+[user]
+  name = August Flanagan
+  email = august.flanagan@gmail.com
 
 [core]
   autocrlf = input
@@ -94,35 +94,11 @@
   showig = !git ls-files -v |grep ^[a-z]  # Cat files and look
 
 
-  ### Trulia-specific
-
-
-  # Create a new branch.  Tracks current branch, unless another branch is explicitly specified.
-  # e.g.
-  #   git newbranch mytopic                     -> tracks current branch
-  #   git newbranch mytopic origin/somebranch   -> tracks origin/somebranch
-  # The '-' at the end starts the cmdline params from 1 instead of 0.
-  newbranch = !sh -c 'git checkout -b $1 -t $2' -
-
-  # Share your branch with others (on your forked repo).  Assumes you have the 'myfork' remote set up.
-  # e.g
-  #   git sharebranch my-feature-branch
-  # Also see: git-collaborate, a ruby script which fetches a coworker's branch and lets you immediately work on it.
-  sharebranch = !git push -u myfork $(git current-branch)
-
-
 [color]
   ui = true
 
 [log]
   # This will default dates to local time unless overridden on the command line or by the repo.
   date = local
-[user]
-	email = august.flanagan@gmail.com
-	name = August Flanagan
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[branch]
+	autosetupmerge = always
