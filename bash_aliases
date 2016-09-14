@@ -43,7 +43,7 @@ alias a='atom $1'
 
 
 ### Navigation
-alias code="cd ~/code"
+alias work="cd ~/code"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
@@ -63,8 +63,7 @@ alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetB
 # Start a simple web server
 alias pyserv="python -m SimpleHTTPServer 8000"
 
-###NerdWallet
-alias nw="cd /srv/nerdwallet"
-alias nwapp="cd /srv/nerdwallet/app-site"
-alias nwtest="cd /srv/nerdwallet/nerdtests"
-alias vnssh="cd ~/dev-vagrant && vagrant ssh"
+### Ruby
+alias be="bundle exec $1"
+alias ber="bundle exec rake $1"
+

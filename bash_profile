@@ -29,14 +29,16 @@ bind 'set completion-ignore-case on'
 # Git autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-eval "$(rbenv init -)"
-export CHEF_USER=aflanagan
 
 # add ssh keys
-ssh-add ~/.ssh/keys/nw_rsa # use this one for personal github
 ssh-add ~/.ssh/keys/cronitor_key
+ssh-add ~/.ssh/keys/babylist
 ssh-add ~/.ssh/cronitor.pem
 
 # Work around bug in browserify
 ulimit -n 2560
+

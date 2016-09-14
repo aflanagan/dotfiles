@@ -102,3 +102,5 @@
   date = local
 [branch]
 	autosetupmerge = always
+[push]
+	default = matching
