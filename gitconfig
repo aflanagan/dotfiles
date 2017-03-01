@@ -7,7 +7,7 @@
   autocrlf = input
   safecrlf = false
 	excludesfile = /Users/_uscr/.gitignore
-  editor = atom -w
+	editor = vim
 
 [diff]
     tool = bcomp
@@ -103,4 +103,6 @@
 [branch]
 	autosetupmerge = always
 [push]
-	default = matching
+	default = simple
+[rerere]
+	enabled = true

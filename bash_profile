@@ -16,6 +16,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# Git autocompletion
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+
 # Menu completion
 bind '"\t":menu-complete'
 
@@ -26,19 +29,15 @@ shopt -s nocaseglob
 # Case insensitive filenames for tab completion.
 bind 'set completion-ignore-case on'
 
-# Git autocompletion
-source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+#MYSQL
+export PATH=${PATH}:/usr/local/mysql/bin
 
-# RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# add ssh keys
-ssh-add ~/.ssh/keys/cronitor_key
-ssh-add ~/.ssh/keys/babylist
-ssh-add ~/.ssh/cronitor.pem
+#RBENV
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Work around bug in browserify
 ulimit -n 2560
 
+
+export NVM_DIR="/Users/augustflanagan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

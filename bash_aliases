@@ -40,23 +40,19 @@ alias edackrc="subl ~/.ackrc"
 
 alias sb='subl $1'
 alias a='atom $1'
-
+alias c='code $1'
 
 ### Navigation
-alias work="cd ~/code"
+alias work="cd ~/work"
+alias bl="cd ~/work/babylist"
+alias crn="cd ~/work/cronitor_project && source ../cronitor_venv/bin/activate"
+alias crnsrv="cd ~/work/cronitor_project && source ../cronitor_venv/bin/activate && python manage.py runserver"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
 ### Open OSX apps from the command line
-alias ecl="open -a eclipse $1"
-alias cog="open -a cog $1"
-alias mate="open -a TextMate $1"
-alias calc="open -a calculator"
 alias chrome="open -a Google Chrome"
 alias firefox="open -a firefox"
-alias versions="open -a versions"
-alias nb="open /Applications/NetBeans/NetBeans\ 7.1.2.app/ && /Applications/NetBeans/NetBeans\ 7.1.2.app/Contents/MacOS/netbeans $1"
-# alias nb="open /Applications/NetBeans/NetBeans\ 7.0.app/ && /Applications/NetBeans/NetBeans\ 7.0.app/Contents/MacOS/netbeans $1"
 
 
 ### Python
@@ -66,4 +62,8 @@ alias pyserv="python -m SimpleHTTPServer 8000"
 ### Ruby
 alias be="bundle exec $1"
 alias ber="bundle exec rake $1"
+
+### BabyList
+alias pdeploy="ber bl:production:deploy"
+alias sdeploy="ber bl:staging:deploy"
 
