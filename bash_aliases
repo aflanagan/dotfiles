@@ -16,30 +16,15 @@ alias ag="ag -i"
 
 ### Handy shortcuts
 
-# Recursive diff, without svn
-alias rdiff='diff -r --exclude=\*\.svn $*'
-
 # List only directories
 alias lsd="ls -d */"
-
-# 'lsr' - Easy recursive search
-# Thank you, http://www.unix.com/unix-advanced-expert-users/69618-shell-programming-aliasing-set-f.html !
-# The problem was that making lsr a shell script was causing the parameter to expand globs like *.css, which futzed find.
-alias lsr='set -f; mylsr'
-mylsr () {
-  find  -L . -iname $@ |fgrep -v .svn
-  set +f
-}
-
 
 
 ### Edit/reload shortcuts
 alias realias="source ~/.bash_aliases"
-alias edalias="subl ~/.bash_aliases"
-alias edackrc="subl ~/.ackrc"
+alias edalias="code ~/.bash_aliases"
+alias edackrc="code ~/.ackrc"
 
-alias sb='subl $1'
-alias a='atom $1'
 alias c='code $1'
 
 ### Navigation
@@ -47,12 +32,19 @@ alias work="cd ~/work"
 alias bl="cd ~/work/babylist"
 alias crn="cd ~/work/cronitor_project && source venv/bin/activate"
 alias crnsrv="cd ~/work/cronitor_project && source venv/bin/activate && python manage.py runserver"
+alias crn3="cd ~/work/cronitor_project && source venv3/bin/activate"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
 ### Open OSX apps from the command line
 alias chrome="open -a Google Chrome"
 alias firefox="open -a firefox"
+
+### Git
+alias g='git $1'
+alias gst='git status'
+alias gbr='git branch'
+alias gco='git checkout'
 
 
 ### Python
