@@ -42,9 +42,9 @@ alias firefox="open -a firefox"
 
 ### Git
 alias g='git $1'
-alias gst='git status'
-alias gbr='git branch'
-alias gco='git checkout'
+alias gst='git st'
+alias gbr='git br'
+alias gco='git co'
 
 
 ### Python
