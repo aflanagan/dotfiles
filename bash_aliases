@@ -45,8 +45,8 @@ alias c='code $1'
 ### Navigation
 alias work="cd ~/work"
 alias bl="cd ~/work/babylist"
-alias crn="cd ~/work/cronitor_project && source ../cronitor_venv/bin/activate"
-alias crnsrv="cd ~/work/cronitor_project && source ../cronitor_venv/bin/activate && python manage.py runserver"
+alias crn="cd ~/work/cronitor_project && source venv/bin/activate"
+alias crnsrv="cd ~/work/cronitor_project && source venv/bin/activate && python manage.py runserver"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 
@@ -64,6 +64,6 @@ alias be="bundle exec $1"
 alias ber="bundle exec rake $1"
 
 ### BabyList
-alias pdeploy="ber bl:production:deploy"
-alias sdeploy="ber bl:staging:deploy"
-
+alias pdeploy="be cap production ci:deploy"
+alias sdeploy="be cap staging ci:deploy"
+alias prollback="be cap production deploy:rollback"
